@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Refresh Me</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" src="">
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2" src="">
+      </div>
+
+    </div>
+
+<script>
+  /*
+  window.onload = function(){
+    var num1 = Math.floor(Math.random() * 6)+1;
+    var num2 = Math.floor(Math.random() * 6)+1;
+    
+    document.querySelector(".img1").setAttribute("src", "./images/dice" + num1 + ".png")
+    document.querySelector(".img2").setAttribute("src", "./images/dice" + num2 + ".png")
+
+    if (num1 === num2) {
+      document.querySelector("h1").textContent = "Tie";
+    }
+    else if (num1 > num2) {
+      document.querySelector("h1").textContent = "Player 1 wins";
+    }
+    else{
+      document.querySelector("h1").textContent = "Player2 wins";
+    }
+  }
+  */
+
+  window.addEventListener('load', () => {
+            // Check if this is the first load
+            if (!sessionStorage.getItem('hasLoadedBefore')) {
+                sessionStorage.setItem('hasLoadedBefore', 'true');
+            } else {
+              var num1 = Math.floor(Math.random() * 6)+1;
+              var num2 = Math.floor(Math.random() * 6)+1;
+              
+              document.querySelector(".img1").setAttribute("src", "./images/dice" + num1 + ".png")
+              document.querySelector(".img2").setAttribute("src", "./images/dice" + num2 + ".png")
+
+              if (num1 === num2) {
+                document.querySelector("h1").textContent = "Tie";
+              }
+              else if (num1 > num2) {
+                document.querySelector("h1").textContent = "Player 1 wins";
+              }
+              else{
+                document.querySelector("h1").textContent = "Player2 wins";
+              }
+            }
+        });
+</script>
+  </body>
+
+
+  <footer>
+    www 🎲 App Brewery 🎲 com
+  </footer>
+</html>
