@@ -1,0 +1,13 @@
+ternary
+
+if somthing ? do this : else this
+
+time < 12 ? print(good night) : print(good day);
+
+
+
+react conditional rendering
+
+time > working_time && print(go home);
+
+it would only print when time is greater
